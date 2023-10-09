@@ -1,0 +1,42 @@
+[BASIC]
+good-names = i,j,k,ex,_,pk,x,y,to,id,tx,bo,kp,
+
+[SPELLING]
+spelling-ignore-comment-directives=fmt: on,fmt: off,noqa:,noqa,nosec,isort:skip,mypy:,pragma:,# noinspection,# noqa
+
+[FORMAT]
+max-line-length = 150
+max-module-lines=2500
+
+[DESIGN]
+max-locals = 40
+max-args = 30
+max-attributes = 30
+max-parents = 20
+min-public-methods = 0
+max-public-methods = 60
+max-branches = 30
+max-statements = 100
+max-bool-expr = 15
+max-returns = 10
+
+[TYPECHECK]
+ignored-classes = Socket,
+                  RawConfigParser,
+                  optparse.Values,
+                  thread._local,
+                  _thread._local,
+                  ujson,
+
+[MESSAGES CONTROL]
+# Only show warnings with the listed confidence levels. Leave empty to show
+# all. Valid levels: HIGH, INFERENCE, INFERENCE_FAILURE, UNDEFINED.
+confidence = # HIGH, INFERENCE, INFERENCE_FAILURE
+disable = unspecified-encoding,
+          broad-exception-caught,
+          broad-exception-raised,
+          expression-not-assigned,
+          missing-module-docstring,
+          missing-class-docstring,
+          missing-function-docstring,
+          consider-using-f-string
