@@ -5,7 +5,7 @@ exclude =
     dev-venv/*,
     build/*,
     dist/*,
-    pyswagger/*,
+    */pyswagger/*,
 ignore = E722,
          Q003,
          Q000,
