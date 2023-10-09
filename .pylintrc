@@ -1,3 +1,7 @@
+[tool.pylint.main]
+ignore = .ci,
+         pyswagger,
+
 [BASIC]
 good-names = i,j,k,ex,_,pk,x,y,to,id,tx,bo,kp,
 

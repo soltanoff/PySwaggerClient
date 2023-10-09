@@ -45,7 +45,7 @@ jobs:
         id: cache-virtualenv
       - name: Analysing the code with pylint
         run: |
-          python -m pylint $(git ls-files '*.py')
+          pylint pyswaggerclient
   safety:
     runs-on: ubuntu-latest
     timeout-minutes: 5
