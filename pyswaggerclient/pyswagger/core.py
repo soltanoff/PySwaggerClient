@@ -9,8 +9,7 @@ from .scan import Scanner
 from .scanner import TypeReduce, CycleDetector
 from .scanner.v1_2 import Upgrade
 from .scanner.v2_0 import AssignParent, Merge, Resolve, PatchObject, YamlFixer, Aggregate, NormalizeRef
-from pyswagger import utils, errs, consts
-import copy
+from pyswaggerclient.pyswagger import utils, errs, consts
 import base64
 import six
 import weakref

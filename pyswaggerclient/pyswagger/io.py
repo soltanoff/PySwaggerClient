@@ -1,11 +1,9 @@
 from __future__ import absolute_import
-from .primitives.comm import PrimJSONEncoder
 from .utils import final, deref, CaseInsensitiveDict
-from pyswagger import errs
+from pyswaggerclient.pyswagger import errs
 from uuid import uuid4
 import six
 import io, codecs
-import collections
 import logging
 from typing import Mapping, MutableMapping
 

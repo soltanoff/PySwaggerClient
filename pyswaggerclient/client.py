@@ -11,9 +11,9 @@ client.actions.your_op_id.call(your=params)
 import json
 from urllib import request
 
-from pyswagger import App
-from pyswagger.contrib.client.requests import Client
-from pyswagger.getter import SimpleGetter
+from pyswaggerclient.pyswagger import App
+from pyswaggerclient.pyswagger.contrib.client.requests import Client
+from pyswaggerclient.pyswagger.getter import SimpleGetter
 
 from .fetch import resolve_spec
 from .util import bind, slugify
