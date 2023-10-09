@@ -1,0 +1,19 @@
+[flake8]
+max-line-length = 150
+exclude =
+    venv*/*,
+    dev-venv/*,
+    build/*,
+    dist/*,
+    */pyswagger/*,
+ignore = E722,
+         Q003,
+         Q000,
+         W503,
+         W504,
+         S310,
+         S404,
+         S607,
+         S603,
+         S101,
+         S506,

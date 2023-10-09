@@ -1,1 +1,1 @@
-from .client import SwaggerClient
+from .client import SwaggerClient  # noqa
