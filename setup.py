@@ -9,7 +9,7 @@ with open('requirements.txt') as f:
 
 setup(
     name='pyswaggerclient',
-    version='2.0',
+    version='2.0.1',
     packages=find_packages(
         exclude=('*.egg-info', 'build', 'dist', 'docs', 'deploy',),
     ),

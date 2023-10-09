@@ -1,15 +1,21 @@
 import json
+
 import six
+
 from .comm import PrimJSONEncoder
 
 
 class MimeCodec:
     def __init__(self):
-        self._codecs = {}
-        self.register('text/plain', PlainCodec())
+        plainCodec = PlainCodec()
         jsonCodec = JsonCodec()
+        htmlTextCodec = HtmlTextCodec()
+
+        self._codecs = {}
+        self.register('text/plain', plainCodec)
         self.register('application/json', jsonCodec)
         self.register('text/json', jsonCodec)
+        self.register('text/html', htmlTextCodec)
 
     def register(self, mime, codec):
         self._codecs[mime.lower()] = codec
@@ -51,3 +57,22 @@ class JsonCodec:
         if isinstance(data, six.binary_type):
             data = data.decode('utf-8')
         return json.loads(data)
+
+
+class HtmlTextCodec:
+    def marshal(self, value, **kwargs):
+        try:
+            return json.dumps(value, cls=PrimJSONEncoder)
+        except:
+            return str(value).encode('utf-8')
+
+    def unmarshal(self, data, **kwargs):
+        if isinstance(data, six.binary_type):
+            decoded_data = data.decode('utf-8')
+        else:
+            decoded_data = data
+
+        try:
+            return json.loads(decoded_data)
+        except:
+            return decoded_data
