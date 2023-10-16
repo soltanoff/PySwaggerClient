@@ -9,7 +9,7 @@ documentation, and seamless programmatic access.
 
 ```bash
 # stable
-pip install https://github.com/soltanoff/PySwaggerClient/archive/v2.0.2.zip
+pip install https://github.com/soltanoff/PySwaggerClient/archive/v2.0.3.zip
 # optional for openapi-3 version handling
 npm install -g api-spec-converter
 ```
