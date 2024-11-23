@@ -9,7 +9,7 @@ documentation, and seamless programmatic access.
 
 ```bash
 # stable
-pip install https://github.com/soltanoff/PySwaggerClient/archive/v2.0.3.zip
+pip install https://github.com/soltanoff/PySwaggerClient/archive/v2.1.0.zip
 # optional for openapi-3 version handling
 npm install -g api-spec-converter
 ```
@@ -73,5 +73,6 @@ pylint pyswaggerclient
 [safety](https://pyup.io/safety/) - a tool designed to check installed dependencies for known vulnerabilities.
 
 ```shell
-safety check
+echo 'Ignore 70612 / CVE-2019-8341, Jinja2 is a safety dep, not ours'
+python -m safety check --ignore 70612
 ```
