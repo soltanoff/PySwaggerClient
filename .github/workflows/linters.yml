@@ -57,4 +57,5 @@ jobs:
         id: cache-virtualenv
       - name: Analysing the dependencies with safety
         run: |
-          python -m safety check
+          echo 'Ignore 70612 / CVE-2019-8341, Jinja2 is a safety dep, not ours'
+          python -m safety check --ignore 70612

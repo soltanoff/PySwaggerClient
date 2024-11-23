@@ -283,7 +283,7 @@ class App(object):
         app = kls(url, url_load_hook=url_load_hook, sep=sep, prim=prim, mime_codec=mime_codec, resolver=resolver)
         app.__raw, app.__version = app.load_obj(url, getter=getter, parser=parser)
         if app.__version not in ['1.2', '2.0']:
-            raise NotImplementedError('Unsupported Version: {0}'.format(self.__version))
+            raise NotImplementedError('Unsupported Version: {0}'.format(app.__version))
 
         # update scheme if any
         p = six.moves.urllib.parse.urlparse(url)
